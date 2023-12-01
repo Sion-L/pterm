@@ -286,3 +286,10 @@ func (p TablePrinter) Render() error {
 
 	return nil
 }
+
+func (p TablePrinter) RenderWrap() error {
+	s, _ := p.Srender()
+	Fprintln(p.Writer, s)
+
+	return nil
+}
